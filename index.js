@@ -29,13 +29,18 @@ app.get('/', (req, res) => {
 app.post("/hook", async (req, res) => {
   // Ensure that this still sends all events and branch functionality on the event category 
   if (req.body.category === 'group_channel:create') {
+
+    // Group channel URL
     const CHANNEL_URL = req.body.channel.channel_url
+
+    // Admin Metadata
     const adminData = {
       img: 'https://i.imgur.com/dXgUAVk.jpg',
       author: 'Alan Kay',
       company: 'Xerox PARC'
     }
 
+    // Message Data
     const data = {
       message_type: 'ADMM',
       user_id: USER_ID,
@@ -45,9 +50,11 @@ app.post("/hook", async (req, res) => {
       data: JSON.stringify(adminData),
       is_silent: true
     }
+
+    // URL to group channel for fetch POST method
     const URL = `https://api-${APP_ID}.sendbird.com/v3/group_channels/${CHANNEL_URL}/messages`
 
-  // MAKE SURE TO HANDLE THE FAILURE CASES ON YOUR API CALL TO SENDBIRD - FETCH
+    // Webhook response to channel:
     const response = await fetch(URL, {
       method: 'POST',
       headers: {
