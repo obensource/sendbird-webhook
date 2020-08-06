@@ -1,10 +1,10 @@
-# sendbird-webhook (takehome assignement)
+# sendbird-webhook
 <img src="https://pbs.twimg.com/media/ET-2PqzU0AAekyC.jpg" width="640px" />
 
-👉 My webhook solution for Sendbird's 'backend + frontend' takehome test!
+👉 A webhook that sends fun messages to a Sendbird client when group channels are created! 🎉
 
 ## Description
-This is a webhook server that works with my fork of SendBird's [`SendBird-JavaScript/web-basic-sample`](https://github.com/obensource/SendBird-JavaScript) client.
+This is a webhook server that works with my fork of SendBird's [`SendBird-JavaScript/web-basic-sample`](https://github.com/obensource/sendbird-web-basic-sample) client.
 
 ## Installation
 **$**`npm install`
@@ -20,4 +20,3 @@ You can boot up [the client](https://github.com/obensource/SendBird-JavaScript) 
 * Navigating to the web-basic-same sub-repo
 * Running **$** `npm install`
 * Running **$** `npm start` or `npm run start:dev` in order to start the client.
-
